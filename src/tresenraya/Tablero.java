@@ -12,12 +12,12 @@ public class Tablero {
 		contador = 0;
 	}
 
-	public void Partida(Ficha ficha, Ficha ficha2) {
+	public void Partida(Ficha ficha, Ficha ficha2, Ficha ficha3) {
 
 		int fila = (int) (Math.random() * 3);
 		int columna = (int) (Math.random() * 3);
 
-		for (int i = 0; i < 2; i++) {
+		for (int i = 0; i < 3; i++) {
 			while (tablero[fila][columna] != null) {
 				fila = (int) (Math.random() * 3);
 				columna = (int) (Math.random() * 3);
@@ -31,10 +31,17 @@ public class Tablero {
 					ficha.setColumna(columna);
 
 				}
-
-				else {tablero[fila][columna] = ficha2;
-				ficha2.setFila(fila);
-				ficha2.setColumna(columna);}
+				
+				if(i==1) {
+					tablero[fila][columna] = ficha2;
+					ficha2.setFila(fila);
+					ficha2.setColumna(columna);
+				}
+				if(i==2) {
+					tablero[fila][columna] = ficha3;
+				ficha3.setFila(fila);
+				ficha3.setColumna(columna);
+				}
  
 			}
 

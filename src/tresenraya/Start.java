@@ -8,8 +8,8 @@ public class Start {
 
 		Ficha ficha = new Ficha('o');
 		Ficha ficha2 = new Ficha('x');
-		tablero.Partida(ficha, ficha2);
-		tablero.Partida(ficha, ficha2);
+		tablero.Partida(ficha, ficha2, ficha);
+		tablero.Partida(ficha2, ficha, ficha2);
 		tablero.imprimir();
 		System.out.println("\n");
 		ficha.imprimirPos();
