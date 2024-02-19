@@ -15,10 +15,7 @@ public class Start {
 		ficha.imprimirPos();
 		System.out.println();
 		ficha2.imprimirPos();
-		System.out.println("\n\n");
-		ficha.imprimirPosMatriz();
-		System.out.println();
-		ficha2.imprimirPosMatriz();
+	
 
 	}
 
