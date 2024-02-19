@@ -2,7 +2,7 @@ package tresenraya;
 
 public class Start {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 		Tablero tablero = new Tablero();
 
@@ -15,6 +15,10 @@ public class Start {
 		ficha.imprimirPos();
 		System.out.println();
 		ficha2.imprimirPos();
+		System.out.println("\n\n");
+		ficha.imprimirPosMatriz();
+		System.out.println();
+		ficha2.imprimirPosMatriz();
 
 	}
 
