@@ -53,15 +53,21 @@ public class Tablero {
 		
 
 		}
+		
+		//llamar desde aqui al arbitro
 	}
 
-	public void imprimir() {
+	public void imprimir() throws InterruptedException {
 
 		for (int i = 0; i < orden; i++) {
-
+				//	Thread.sleep(1000);
 			for (int j = 0; j < orden; j++) {
-
-				System.out.print(tablero[i][j] + " ");
+				if (tablero[i][j]!=null) {
+					Thread.sleep(1000);
+					
+				}
+				
+					System.out.print(tablero[i][j] + " ");
 			}
 			System.out.println();
 		}
