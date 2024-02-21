@@ -23,6 +23,7 @@ public class Arbitro {
 		
 		
 		//hacer los ifs mas genericos y boolean
+		
 		if(fila[0]==0 && columna[0]==0 && fila[1]==1 &&
 				columna[1]==0 && fila[2]==2 && columna[2]==0) {
 			
