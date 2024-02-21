@@ -1,28 +1,13 @@
 package tresenraya;
 
 public class Arbitro {
-//Array para combinaciones ganadoras como atributo
-//Metodo que compare las posiciones con la array de posiciones ganadoras
 
-	private int combinacionesFila[];
-	private int combinacionesColumna[];
-	private int contador;
-	
-	public Arbitro() {
-		
-		int contador=0;
-		combinacionesFila = new int [4];
-		combinacionesColumna = new int [5];
 
-		
-		
-	}
+
 	
-	
-	public void hayGanadorColumna(int fila[], int columna[]) {
+	public boolean hayGanadorColumna(int fila[], int columna[]) {
 		
 		
-		//hacer los ifs mas genericos y boolean
 		
 		for (int i=0;i<3;i++) {
 			
@@ -30,16 +15,18 @@ public class Arbitro {
 				
 				if(columna[i]==i) {
 					System.out.println("ganador");
+					return true;
 				}
 			}
 		}
 		
+		return false;
 		
 	
 		
 	}
 	
-	public void hayGanadorFila(int fila[], int columna[]) {
+	public boolean hayGanadorFila(int fila[], int columna[]) {
 		
 	
 		for(int i=0;i<3;i++) {
@@ -48,15 +35,17 @@ public class Arbitro {
 				
 				if(fila[i]==i) {
 					System.out.println("ganador");
+					return true;
 				}
 			}
 			
 		}
+		return false;
 			
 	}
 
 	
-	public void hayGanadorDiagonal(int fila[], int columna[]) {
+	public boolean hayGanadorDiagonal(int fila[], int columna[]) {
 		int contador=0;
 		for(int i=0;i<3;i++) {
 			
@@ -66,6 +55,7 @@ public class Arbitro {
 		}
 		if(contador==3) {
 			System.out.println("ganador");
+			return true;
 		}
 
 			
@@ -78,7 +68,10 @@ public class Arbitro {
 		}
 		if(contador==3) {
 			System.out.println("ganador");
+			return true;
 		}
+		
+		return false;
 		
 	}
 }
