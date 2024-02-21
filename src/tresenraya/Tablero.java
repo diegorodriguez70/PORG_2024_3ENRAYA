@@ -31,6 +31,7 @@ public class Tablero {
 					ficha.setFila(fila);
 					ficha.setColumna(columna);
 					ficha.setPosicion(fila, columna);
+				//	this.imprimir();
 
 				}
 				
@@ -40,6 +41,7 @@ public class Tablero {
 					ficha2.setFila(fila);
 					ficha2.setColumna(columna);
 					ficha2.setPosicion(fila, columna);
+			//		this.imprimir();
 				}
 				if(i==2) {
 					tablero[fila][columna] = ficha3;
@@ -47,6 +49,7 @@ public class Tablero {
 				ficha3.setFila(fila);
 				ficha3.setColumna(columna);
 				ficha3.setPosicion(fila, columna);
+			//	this.imprimir();
 				}
  
 			}
@@ -60,16 +63,18 @@ public class Tablero {
 	public void imprimir() throws InterruptedException {
 
 		for (int i = 0; i < orden; i++) {
-				//	Thread.sleep(1000);
+			
+	
 			for (int j = 0; j < orden; j++) {
 				if (tablero[i][j]!=null) {
 					Thread.sleep(1000);
 					
 				}
 				
-					System.out.print(tablero[i][j] + " ");
+				
+					System.out.print("   " +tablero[i][j] + "   ");
 			}
-			System.out.println();
+			System.out.println("\n");
 		}
 
 	}

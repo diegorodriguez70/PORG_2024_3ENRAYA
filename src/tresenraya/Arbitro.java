@@ -24,22 +24,16 @@ public class Arbitro {
 		
 		//hacer los ifs mas genericos y boolean
 		
-		if(fila[0]==0 && columna[0]==0 && fila[1]==1 &&
-				columna[1]==0 && fila[2]==2 && columna[2]==0) {
+		for (int i=0;i<3;i++) {
 			
-			 System.out.println( "GANADOR");
+			if (columna[0]==columna[1]&&columna[1]==columna[2]) {
+				
+				if(columna[i]==i) {
+					System.out.println("ganador");
+				}
+			}
 		}
 		
-		if(fila[0]==0 && columna[0]==1 && fila[1]==1 &&
-				columna[1]==1 && fila[2]==2 && columna[2]==1) {
-			 System.out.println( "GANADOR");
-		}
-		
-		if(fila[0]==0 && columna[0]==2 && fila[1]==1 &&
-				columna[1]==2 && fila[2]==2 && columna[2]==2) {
-			
-			 System.out.println( "GANADOR");
-		}
 		
 	
 		
@@ -47,31 +41,43 @@ public class Arbitro {
 	
 	public void hayGanadorFila(int fila[], int columna[]) {
 		
-		if(fila[0]==0 && columna[0]==0 && fila[1]==0 && columna[1]==1 && fila[2]==0 && columna[2]==2) {
+	
+		for(int i=0;i<3;i++) {
 			
-			System.out.println("GANADOR");
-		}
-		if(fila[0]==1 && columna[0]==0 && fila[1]==1 && columna[1]==1 && fila[2]==1 && columna[2]==2) {
+			if(fila[0]==fila[1] && fila[1]==fila[2]) {
+				
+				if(fila[i]==i) {
+					System.out.println("ganador");
+				}
+			}
 			
-			System.out.println("GANADOR");
-		}
-		if(fila[0]==2 && columna[0]==0 && fila[1]==2 && columna[1]==1 && fila[2]==2 && columna[2]==2) {
-			
-			System.out.println("GANADOR");
 		}
 			
 	}
 
 	
 	public void hayGanadorDiagonal(int fila[], int columna[]) {
-		
-		if(fila[0]==0 && columna[0]==0 && fila[1]==1 && columna[1]==1 && fila[2]==2 && columna[2]==2) {
+		int contador=0;
+		for(int i=0;i<3;i++) {
 			
-			System.out.println("GANADOR");
+			if(fila[i]==columna[i]) {
+				contador++;
+			}
 		}
-		if(fila[0]==0 && columna[0]==2 && fila[1]==1 && columna[1]==1 && fila[2]==2 && columna[2]==0) {
+		if(contador==3) {
+			System.out.println("ganador");
+		}
+
 			
-			System.out.println("GANADOR");
+		contador=0;
+		for (int i=0, j=2;i<3&&j>0;i++, j--) {
+			
+			if(fila[i]==columna[j]) {
+				contador++;
+			}
+		}
+		if(contador==3) {
+			System.out.println("ganador");
 		}
 		
 	}
