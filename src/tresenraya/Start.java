@@ -10,14 +10,14 @@ public class Start {
 		Ficha ficha2 = new Ficha('x');
 		tablero.Partida(ficha, ficha2, ficha);
 		tablero.Partida(ficha2, ficha, ficha2);
-		tablero.imprimir();
+
 		System.out.println("\n");
-	//	ficha.imprimirPos();
+	
 		System.out.println();
 		ficha2.imprimirPos();
 		
 		
-//		tablero.hayGanador(ficha, ficha2);
+
 		Arbitro arbi = new Arbitro();
 
 		System.out.print("Las o ");
